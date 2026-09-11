@@ -1,0 +1,23 @@
+.nx-mascot{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));width:80px;height:88px;z-index:20;font:14px/1.5 system-ui,sans-serif;color:#f4f7fa}
+.nx-mascot[hidden],.nx-mascot [hidden]{display:none!important}
+.nx-mascot[data-paused=true]{visibility:hidden;pointer-events:none}
+.nx-mascot button,.nx-mascot a{font:inherit}
+.nx-mascot-toggle{width:80px;height:80px;padding:0;background:#101820;border:1px solid #35434e;border-radius:28px;cursor:pointer;box-shadow:0 8px 24px #0004;color:inherit}
+.nx-mascot svg{width:76px;height:76px;overflow:visible;pointer-events:none}
+.nx-mascot-eye{transform-box:fill-box;transform-origin:center;animation:nx-blink 7s ease-in-out 3}
+.nx-mascot-head{transform-origin:48px 45px;transition:transform .45s ease}
+.nx-mascot-toggle:hover .nx-mascot-head{transform:rotate(-5deg)}
+.nx-mascot-toggle:active{transform:scale(.97)}
+.nx-mascot-dismiss{position:absolute;right:-5px;top:-18px;width:44px;height:44px;border:0;border-radius:50%;background:#151b21;color:#dce7ef;cursor:pointer;font-size:20px!important}
+.nx-mascot-panel,.nx-mascot-bubble{position:absolute;right:0;bottom:104px;width:min(280px,calc(100vw - 32px));box-sizing:border-box;background:#111820;border:1px solid #34414c;border-radius:18px;padding:16px;box-shadow:0 12px 36px #0005}
+.nx-mascot-panel h2{font-size:18px;margin:0 0 6px;color:inherit}
+.nx-mascot-panel{max-height:calc(100dvh - 140px);overflow-y:auto;overscroll-behavior:contain}
+.nx-mascot-panel p{font-size:13px;margin:0 0 12px;color:#b9c5ce}
+.nx-mascot-panel a,.nx-mascot-panel button{display:block;box-sizing:border-box;width:100%;min-height:44px;padding:10px 12px;margin:4px 0;background:#1a2630;border:1px solid transparent;border-radius:9px;color:#f0f5f8;text-align:left;text-decoration:none;cursor:pointer}
+.nx-mascot-panel a:hover,.nx-mascot-panel button:hover{background:#243846}
+.nx-mascot :focus-visible,.nx-mascot-restore:focus-visible{outline:2px solid #80c8ec;outline-offset:3px}
+.nx-mascot-bubble{margin:0;font-size:14px;pointer-events:none}
+.nx-mascot-restore{font:inherit;color:inherit;background:transparent;border:1px solid #46505a;border-radius:8px;min-height:44px;padding:8px 12px;margin:12px 0;cursor:pointer}
+@keyframes nx-blink{0%,45%,49%,100%{transform:scaleY(1)}47%{transform:scaleY(.1)}}
+@media(max-width:600px){.nx-mascot{right:12px;bottom:max(14px,env(safe-area-inset-bottom));width:60px;height:68px}.nx-mascot-toggle{width:60px;height:60px;border-radius:21px}.nx-mascot svg{width:56px;height:56px}.nx-mascot-panel,.nx-mascot-bubble{bottom:88px}.nx-mascot-eye{animation:none}}
+@media(prefers-reduced-motion:reduce){.nx-mascot *{animation:none!important;transition:none!important;transform:none!important}}
