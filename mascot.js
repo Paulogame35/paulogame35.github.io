@@ -67,7 +67,7 @@
     let r = root.getBoundingClientRect();
     if (!bubble.hidden) { const b = bubble.getBoundingClientRect(); r = { top: b.top, bottom: r.bottom, left: Math.min(b.left, r.left), right: r.right }; }
     const overlaps = el => { const b = el.getBoundingClientRect(); return b.bottom > r.top - 24 && b.top < r.bottom + 12 && b.right > r.left - 12 && b.left < r.right + 12; };
-    if (!blocked) blocked = [...document.querySelectorAll('a,button,input,textarea,select,[role="button"],.adsbygoogle,[data-ad-slot]')]
+    if (!blocked) blocked = [...document.querySelectorAll('a,button,input,textarea,select,[role="button"],.tool-shell,.page-result,.nick-preview,.adsbygoogle,[data-ad-slot]')]
       .some(el => !root.contains(el) && visible(el) && overlaps(el));
     const value = String(blocked);
     if (root.dataset.paused !== value) root.dataset.paused = value;
